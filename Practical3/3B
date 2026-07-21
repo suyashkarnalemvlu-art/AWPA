@@ -1,0 +1,30 @@
+using System;
+delegate void Message();
+class Demo
+{
+public void Welcome()
+{
+Console.WriteLine("Welcome Students");
+}
+public void Learn()
+{
+Console.WriteLine("Learn Delegates");
+}
+public void ThankYou()
+{
+Console.WriteLine("Thank You");
+}
+}
+class Program
+{
+static void Main()
+{
+Demo d = new Demo();
+Message obj;
+obj = d.Welcome;
+obj += d.Learn;
+obj += d.ThankYou;
+obj();
+Console.WriteLine("Suyash Karnale T012");
+}
+}
