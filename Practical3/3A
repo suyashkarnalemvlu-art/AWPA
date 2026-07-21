@@ -1,0 +1,40 @@
+using System;
+delegate void Operation(int a, int b);
+class Calculator
+{
+public void Add(int a, int b)
+{
+Console.WriteLine("Addition=" + (a + b));
+}
+public void Sub(int a, int b)
+{
+Console.WriteLine("Subtraction=" + (a - b));
+}
+public void Multiply(int a, int b)
+
+Suyash Karnale T012
+{
+Console.WriteLine("Multiply=" + (a * b));
+}
+public void Division(int a, int b)
+{
+Console.WriteLine("Division=" + (a / b));
+}
+}
+class Program
+{
+static void Main()
+{
+Calculator c = new Calculator();
+Operation obj;
+obj = c.Add;
+obj(10,5);
+obj = c.Sub;
+obj(10,5);
+obj = c.Multiply;
+obj(10,5);
+obj = c.Division;
+obj(10,5);
+Console.WriteLine("Suyash Karnale T012");
+}
+}
